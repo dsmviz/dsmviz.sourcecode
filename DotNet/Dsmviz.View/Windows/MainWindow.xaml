@@ -1,0 +1,36 @@
+﻿<Window x:Class="Dsmviz.View.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:userControls="clr-namespace:Dsmviz.View.UserControls"
+        xmlns:matrix="clr-namespace:Dsmviz.View.Matrix"
+        mc:Ignorable="d"
+        Title="{Binding Title}" 
+        Height="Auto" 
+        Width="Auto"
+        Loaded="MainWindow_OnLoaded"
+        Style="{StaticResource WindowStyle}"
+        Icon="/Dsmviz.View;component/Resources/DSM.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="24" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="16" />
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" >
+            <Image DockPanel.Dock="Left" Source="{StaticResource ApplicationIcon}" Width="20" Height="20" Margin="10,0,10,0"/>
+            <Label DockPanel.Dock="Left" Content="{Binding Title}" VerticalAlignment="Center"/>
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="Minimize" Style="{StaticResource MinimizeButtonStyle}"/>
+                <Button x:Name="Maximize" Style="{StaticResource MaximizeButtonStyle}"/>
+                <Button x:Name="Close" Style="{StaticResource CloseButtonStyle}"/>
+            </StackPanel>
+        </DockPanel>
+
+        <userControls:ToolView Grid.Row="1"/>
+        <matrix:MatrixView x:Name="Matrix" Grid.Row="2"/>
+        <userControls:LegendView Grid.Row="3"/>
+    </Grid>
+</Window>

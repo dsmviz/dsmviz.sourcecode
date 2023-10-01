@@ -1,32 +1,21 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
+build/
+packages/
+idloutput/
+*.suo
+*.tlb
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+*.pdb
+*.user
 *.exe
-*.out
-*.app
+*.msi
+*.tlog
+*.opendb
+*.db
+*.lastbuildstate
+*.bak
+results.xml
+DsmSuite.Analyzer.VisualStudio.Test.Data.Com/DsmSuiteAnalyzerVisualStudioTestDataCom_i.c
+DsmSuite.Analyzer.VisualStudio.Test.Data.Com/DsmSuiteAnalyzerVisualStudioTestDataCom_i.h
+DsmSuite.Analyzer.VisualStudio.Test.Data.Com/DsmSuiteAnalyzerVisualStudioTestDataCom_p.c
+ipch/
+.vs/

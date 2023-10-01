@@ -1,0 +1,1 @@
+packages\ReportGenerator.4.3.6\tools\net47\reportgenerator.exe -reports:results.xml -targetdir:build\coverage  
